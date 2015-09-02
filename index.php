@@ -1,7 +1,7 @@
 <?php
 if ($_SESSION['captcha'] === $_POST['captcha'])
 	{
-		$to      = 'seqular@litl-admin.ru';
+
 		$subject = 'Оставлено новое сообщение';
 		$message = 'NAME:'.@mysql_real_escape_string($_POST['name'])."\r\n";
 		$message .= 'MAIL:'.@mysql_real_escape_string($_POST['mail'])."\r\n";
