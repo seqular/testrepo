@@ -1,4 +1,5 @@
 <?php
+session_start()
 if ($_SESSION['captcha'] === $_POST['captcha'])
 	{
 		$to      = 'seqular@litl-admin.ru';
