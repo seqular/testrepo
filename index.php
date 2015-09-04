@@ -12,6 +12,7 @@ if ($_SESSION['captcha'] === $_POST['captcha'])
 			'X-Mailer: PHP/' . phpversion();
 		mail($to, $subject, $message, $headers);
 		echo "Обращение успешно отправлено";
+		file_put_contents('logfile.log', date("Y-m-d H:i:s") . " $message", FILE_APPEND | LOCK_EX);
 	}
 else
 	{
